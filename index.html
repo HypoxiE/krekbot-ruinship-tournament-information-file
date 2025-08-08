@@ -35,6 +35,19 @@
 			font-size: 14px;
 			background: #eee;
 		}
+		pre {
+			background: #f0f0f0;
+			padding: 10px;
+			border-radius: 5px;
+			cursor: pointer;
+			user-select: none;
+			position: relative;
+			transition: background-color 0.3s;
+		}
+		pre.copied {
+			background-color: #d4edda;
+			border: 1px solid #28a745;
+		}
 	</style>
 </head>
 <body>
@@ -47,34 +60,67 @@
 		<h2>Как участвовать?</h2>
 		<ol type="1">
 			<li> 
-				Скачайте <a href="https://drive.google.com/drive/folders/1Cj3r3xmrhbSOarYRJnZ1-Cl9CGJHXKp_?usp=sharing" target="_blank" rel="noopener noreferrer">всё необходимое</a> для прохождения турнира:
+				<strong>Подготовьте все необходимые <a href="https://drive.google.com/drive/folders/1Cj3r3xmrhbSOarYRJnZ1-Cl9CGJHXKp_?usp=sharing" target="_blank" rel="noopener noreferrer">файлы</a> для прохождения турнира:</strong><br><br>
 				<ol type="A">
 					<li>
 						Скачайте <a href="https://drive.google.com/file/d/13im-l6X2j-s5scZZlBvt2DCjYBbk2qI8/view?usp=sharing" target="_blank" rel="noopener noreferrer">необходимые моды</a>
-						<ol type="a">
+						<ul>
 							<li>
 								Распакуйте их в папку Mods:
-								<br><code>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods</code>
+								<br><pre class="code-block">C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods</pre>
 							</li>
-						</ol>
+						</ul>
 					</li>
 					<li>
 						Скачайте <a href="https://drive.google.com/file/d/1eEBGmfh7Gu2g_KQoCiVg8XsRM9m_-DZB/view?usp=sharing" target="_blank" rel="noopener noreferrer">файл сценария</a>
-						<ol type="a">
+						<ul>
 							<li>
 								Закиньте его в папку со сценариями:
-								<br><code>%userprofile%\AppData\LocalLow\Ludeon Studios\RimWorld by Ludeon Studios\Scenarios</code>
+								<br><pre class="code-block">%userprofile%\AppData\LocalLow\Ludeon Studios\RimWorld by Ludeon Studios\Scenarios</pre>
 							</li>
-						</ol>
+						</ul>
 					</li>
 					<li>
 						Скачайте <a href="https://drive.google.com/file/d/1xxASbjTXkFWIGRwJe3zxgCqRXH4Kg_MD/view?usp=sharing" target="_blank" rel="noopener noreferrer">файл конфигурации модов</a>
-						<ol type="a">
+						<ul>
 							<li>
 								Закиньте его в папку со конфигами:
-								<br><code>%userprofile%\AppData\LocalLow\Ludeon Studios\RimWorld by Ludeon Studios\Config</code>
+								<br><pre class="code-block">%userprofile%\AppData\LocalLow\Ludeon Studios\RimWorld by Ludeon Studios\Config</pre>
 							</li>
-						</ol>
+						</ul>
+					</li>
+				</ol>
+			</li><br>
+			<li>
+				<strong>Как играть?</strong><br><br>
+				<ol type="a">
+					<li>
+						Выбор сценария
+						<ul>
+							<li>Сценарий: <code>ТЕСТОВЫЙ ЭТАП Турнир RuinShip</code></li>
+						</ul>
+					</li>
+					<li>
+						Выбор ИИ-рассказчика
+						<ul>
+							<li>Рассказчик: <code>Кассандра Классическая</code></li>
+							<li>Сложность: <code>Проигрывать - весело</code></li>
+							<li>Сохранения: <code>"Ответственный" режим</code></li>
+						</ul>
+					</li>
+					<li>
+						Создать мир
+						<ul>
+							<li>Зерно: рандомное, менять запрещено</li>
+							<li>Размер карты мира: <code>30%</code></li>
+							<li>Всё остальное оставляйте по умолчанию</li>
+						</ul>
+					</li>
+					<li>
+						Идеология: любая устоявшаяся
+					</li>
+					<li>
+						Ксенотипы: любые из стандартных
 					</li>
 				</ol>
 			</li>
@@ -92,5 +138,24 @@
 		&copy; 2025 Krekeros & Krek4at team
 	</footer>
 
+	<script>
+		document.querySelectorAll('.code-block').forEach(pre => {
+			pre.addEventListener('click', () => {
+			const originalText = pre.textContent;
+
+			navigator.clipboard.writeText(originalText).then(() => {
+				pre.classList.add('copied');
+				pre.textContent = 'Скопировано!';
+
+				setTimeout(() => {
+				pre.classList.remove('copied');
+				pre.textContent = originalText;
+				}, 1500);
+			}).catch(err => {
+				alert('Ошибка копирования: ' + err);
+			});
+			});
+		});
+	</script>
 </body>
 </html>
