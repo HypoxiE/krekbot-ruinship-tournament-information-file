@@ -59,6 +59,31 @@
 		small {
 			color: rgb(93, 93, 93);
 		}
+		summary {
+			cursor: pointer;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 4px;
+		}
+		
+		summary::-webkit-details-marker {
+			display: none;
+		}
+		summary::marker {
+			content: "";
+		}
+		details > summary::after {
+			content: "";
+			width: 70px;
+			height: 16px;
+			background-image: url('open.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		details[open] > summary::after {
+			background-image: url('close.png');
+		}
 	</style>
 </head>
 <body>
@@ -68,11 +93,11 @@
 	</header>
 
 	<main>
-		<summary><h2>Как участвовать?</h2></summary>
+		<h2>Как участвовать?</h2>
 		<ol type="1">
 			<li>
 				<details>
-					<summary><strong>Подготовьте все необходимые <a href="https://drive.google.com/drive/folders/1Cj3r3xmrhbSOarYRJnZ1-Cl9CGJHXKp_?usp=sharing" target="_blank" rel="noopener noreferrer">файлы</a> для прохождения турнира:</strong></summary>
+					<summary><span class="text"><strong>Подготовьте все необходимые <a href="https://drive.google.com/drive/folders/1Cj3r3xmrhbSOarYRJnZ1-Cl9CGJHXKp_?usp=sharing" target="_blank" rel="noopener noreferrer">файлы</a> для прохождения турнира:</strong></summary>
 					<ol type="A">
 						<li>
 							Скачайте <a href="https://drive.google.com/file/d/13im-l6X2j-s5scZZlBvt2DCjYBbk2qI8/view?usp=sharing" target="_blank" rel="noopener noreferrer">необходимые моды</a>
