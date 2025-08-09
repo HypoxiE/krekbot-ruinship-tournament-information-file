@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Описание страницы">
+	<meta name="description" content="Вся информация про турнир по Rimworld 'Ruin Ship'">
 	<title>Ruin Ship tournament</title>
+	<link rel="icon" href="icon.ico" type="image/x-icon">
 
-	<!-- Подключение стилей -->
 	<style>
 		body {
 			font-family: Arial, sans-serif;
@@ -61,12 +61,9 @@
 		}
 		summary {
 			cursor: pointer;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 4px;
+			display: block; /* чтобы summary занимал всю ширину */
+			position: relative;
 		}
-		
 		summary::-webkit-details-marker {
 			display: none;
 		}
@@ -75,17 +72,27 @@
 		}
 		details > summary::after {
 			content: "";
-			width: 70px;
-			height: 16px;
-			background-image: url('open.png');
+			display: block;       /* чтобы перейти на новую строку */
+			width: 100px;
+			height: 30px;
+			background-image: url('images/open.png');
 			background-size: contain;
 			background-repeat: no-repeat;
+			margin-top: 4px;      /* отступ сверху, чтобы отделить от текста */
 		}
 		details[open] > summary::after {
-			background-image: url('close.png');
+			background-image: url('images/close.png');
 		}
 		* {
 			-webkit-tap-highlight-color: transparent;
+		}
+
+		hr {
+			border: none;
+			height: 4px;
+			background-color: #3a3c9a;
+			width: 95%;
+			margin: 20px auto;
 		}
 	</style>
 </head>
@@ -172,6 +179,9 @@
 						<li>
 							Ксенотипы: любые из стандартных кроме гемофага
 						</li>
+						<li>
+							Размер карты стандартный: 250x250 клеток
+						</li>
 					</ol>
 				</details>
 			</li><br>
@@ -194,9 +204,10 @@
 					</ol>
 				</details>
 			</li>
+			При возникновении вопросов можно обратиться к турнирным помощникам в нашем <a href="https://discord.gg/SzPDxncBXh" target="_blank" rel="noopener noreferrer">discord сервере</a> или в <a href="" target="_blank" rel="noopener noreferrer">телеграм канале</a>(но быстрее и лучше в дискорде)
 		</ol>
 
-		<hr style="border: none; height: 4px; background-color: #3a3c9a; width: 95%; margin: 20px auto;">
+		<hr>
 		<h2>За что даются баллы?</h2>
 		<ol type="1">
 			<li>
@@ -281,14 +292,34 @@
 				</details>
 			</li><br>
 		</ol>
-		<hr style="border: none; height: 4px; background-color: #3a3c9a; width: 95%; margin: 20px auto;">
-
+		<hr>
+		<h2>Крайний срок подачи заявок</h2>
+		Заявки на участие в турнире принимаются до <strong>31 августа 2025 г</strong>. После окончания приёма заявок в течение суток мы перепроверим победителей и озвучим результат турнира.<br><br>
+		Просьба отправлять заявки заранее, чтобы у нас было время пересчитать баллы у тех, кто ошибся в подсчете.
+		<hr>
+		<h2>Основные требования</h2>
+		<ul>
+			<li>Убедитесь, что у вас актуальная версия игры 1.6</li>
+			<li>Убедитесь, что у вас есть все 4 дополнения (<a href="https://store.steampowered.com/app/1149640/RimWorld__Royalty/" target="_blank" rel="noopener noreferrer">Royalty</a>, <a href="https://store.steampowered.com/app/1392840/RimWorld__Ideology/" target="_blank" rel="noopener noreferrer">Ideology</a>, <a href="https://store.steampowered.com/app/1826140/RimWorld__Biotech/" target="_blank" rel="noopener noreferrer">Biotech</a> <a href="https://store.steampowered.com/app/3022790/RimWorld__Odyssey/" target="_blank" rel="noopener noreferrer">Odyssey</a>)</li>
+				<small>Можно ли на пиратке? Смотрите два условия сверху :3</small>
+			<li>Вам необходимо будет вести прямую трансляцию для предоставления нам записи! Рекомендуем использовать ютуб, чтобы запись сохранилась до конца турнира! Ибо если твичевская запись пропадёт будет очень обидно (никто не запрещает вести рестрим и на ютуб и на твич, а так же банально перезалить запись стрима с твича на ютуб)</li>
+			<li>Само собой разрешается прерывать трансляцию, чтобы продолжить прохождение на следующей</li>
+			<li><strong>В начале и в конце каждого стрима покажите всю карту, на которой находитесь и статистику поселения</strong></li>
+				<small>Просьба не сидеть на паузе слишком долго, чтобы модераторы не сошли с ума, увидев длительность вашего прохождения</small>
+		</ul>
+		<hr>
 		<h2>Правила</h2>
 		<ul>
-			<li>Запрещено передвижение караваном по глобальной карте</li>
+			<li>Запрещено передвижение караваном по глобальной карте (передвигаться можно только при помощи “Капсул”/”Шаттлов”/”Гравикорабля”)</li>
 			<li>Запрещено использовать читы/менять файлы игры</li>
-			<li></li>
+			<li>Запрещены</li>
 			<li>Участие в турнире разрешено только на версии игры для платформы Windows 10/11 64bit</li>
+		</ul>
+		За нарушение правил предусмотрены следующие наказания:
+		<ul>
+			<li>В случае прогнозируемой выгоды от нарушения снимается количество баллов, равное полученному</li>
+			<li>В случае невозможности прогнозирования выгоды заявка аннулируется</li>
+			<li>За многократные или умышленные нарушения по решению администрации пользователь может быть отстранён от этого турнира и дальнейших подобных мероприятий</li>
 		</ul>
 	</main>
 
