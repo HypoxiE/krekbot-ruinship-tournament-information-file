@@ -44,7 +44,7 @@
 			user-select: none;
 			position: relative;
 			transition: background-color 0.3s;
-			margin-left: -110px;
+			margin-left: -70px;
 			overflow-x: auto;
 			white-space: pre;
 		}
@@ -54,7 +54,7 @@
 		}
 		code {
 			font-weight: bold;
-			font-size: 16px;
+			font-size: 15px;
 		}
 		small {
 			color: rgb(93, 93, 93);
@@ -84,6 +84,23 @@
 		details[open] > summary::after {
 			background-image: url('images/close.png');
 		}
+		details {
+			display: block;
+			appearance: none;
+			-webkit-appearance: none;
+			box-sizing: border-box;
+			background-clip: padding-box;
+			padding: 5px;
+			border: 2px solid transparent;
+			border-radius: 8px;
+			transition: border-color 0.5s ease;
+			overflow: hidden;
+		}
+		details:open {
+			border-color: #3e2fa0;
+			background: #e9e8ee;
+		}
+
 		* {
 			-webkit-tap-highlight-color: transparent;
 		}
@@ -97,12 +114,18 @@
 		}
 
 		img {
-			user-select: none;
 			height: auto;
 			width: 90%;
 			border: 5px solid #3a3c9a;
 			border-radius: 15px;
 			box-sizing: border-box;
+		}
+
+		body {
+			user-select: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
 		}
 
 		.star::before {
