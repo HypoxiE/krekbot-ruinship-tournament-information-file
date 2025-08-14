@@ -3,142 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Вся информация про турнир по Rimworld 'Ruin Ship'">
+	<meta name="description" content="Информация про турнир по Rimworld 'Ruin Ship'">
 	<title>Турнир RuinShip</title>
 	<link rel="icon" href="images/favicon.ico?v=2" type="image/x-icon">
-
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-			background-color: #f5f5f5;
-			color: #333;
-		}
-		header {
-			background-color: #3a3c9a;
-			color: white;
-			padding: 15px;
-			text-align: center;
-		}
-		main {
-			max-width: 800px;
-			margin: 20px auto;
-			padding: 20px;
-			background: white;
-			border-radius: 8px;
-			box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-		}
-		footer {
-			text-align: center;
-			padding: 10px;
-			font-size: 14px;
-			background: #eee;
-		}
-		pre {
-			font-size: 14px;
-			background: #f0f0f0;
-			padding: 10px;
-			border-radius: 5px;
-			cursor: pointer;
-			user-select: none;
-			position: relative;
-			transition: background-color 0.3s;
-			margin-left: -70px;
-			overflow-x: auto;
-			white-space: pre;
-		}
-		pre.copied {
-			background-color: #d4edda;
-			border: 1px solid #28a745;
-		}
-		code {
-			font-weight: bold;
-			font-size: 15px;
-		}
-		small {
-			color: rgb(93, 93, 93);
-		}
-		summary {
-			cursor: pointer;
-			display: block; /* чтобы summary занимал всю ширину */
-			position: relative;
-		}
-		summary::-webkit-details-marker {
-			display: none;
-		}
-		summary::marker {
-			content: "";
-		}
-		details > summary::after {
-			content: "";
-			display: block;       /* чтобы перейти на новую строку */
-			width: 100px;
-			height: 30px;
-			background-image: url('images/open.png');
-			background-size: contain;
-			background-repeat: no-repeat;
-			margin-top: 4px;      /* отступ сверху, чтобы отделить от текста */
-			filter: hue-rotate(200deg) saturate(2);
-		}
-		details[open] > summary::after {
-			background-image: url('images/close.png');
-		}
-		details {
-			display: block;
-			appearance: none;
-			-webkit-appearance: none;
-			box-sizing: border-box;
-			background-clip: padding-box;
-			padding: 5px;
-			border: 2px solid transparent;
-			border-radius: 8px;
-			transition: border-color 0.5s ease;
-			overflow: hidden;
-		}
-		details[open] {
-			border-color: #3e2fa0;
-			background: #e9e8ee;
-		}
-
-
-		* {
-			-webkit-tap-highlight-color: transparent;
-		}
-
-		hr {
-			border: none;
-			height: 4px;
-			background-color: #3a3c9a;
-			width: 95%;
-			margin: 20px auto;
-		}
-
-		img {
-			height: auto;
-			width: 90%;
-			border: 5px solid #3a3c9a;
-			border-radius: 15px;
-			box-sizing: border-box;
-		}
-
-		body {
-			user-select: none;
-			-webkit-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-		}
-
-		.star::before {
-			content: "";
-			display: inline-block;
-			width: 1em;
-			height: 1em;
-			background: url("images/icon_big.ico") no-repeat center center;
-			background-size: contain;
-			color: transparent;
-		}
-	</style>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -151,10 +19,10 @@
 		<ol type="1">
 			<li>
 				<details>
-					<summary><span class="text"><strong>Подготовьте все необходимые <a href="https://drive.google.com/drive/folders/1Cj3r3xmrhbSOarYRJnZ1-Cl9CGJHXKp_?usp=sharing" target="_blank" rel="noopener noreferrer">файлы</a> для прохождения турнира:</strong></summary>
+					<summary><strong>Подготовьте все необходимые <a href="" target="_blank" rel="noopener noreferrer">файлы</a> для прохождения турнира:</strong><small>(До начала турнира, ссылки в этом разделе будут нерабочими)</small></summary>
 					<ol type="a">
 						<li>
-							Скачайте <a href="https://drive.google.com/file/d/13im-l6X2j-s5scZZlBvt2DCjYBbk2qI8/view?usp=sharing" target="_blank" rel="noopener noreferrer">необходимые моды</a>
+							Скачайте <a href="" target="_blank" rel="noopener noreferrer">необходимые моды</a>
 							<ul>
 								<li>
 									Распакуйте их в папку Mods:
@@ -163,7 +31,7 @@
 							</ul>
 						</li>
 						<li>
-							Скачайте <a href="https://drive.google.com/file/d/1eEBGmfh7Gu2g_KQoCiVg8XsRM9m_-DZB/view?usp=sharing" target="_blank" rel="noopener noreferrer">файл сценария</a>
+							Скачайте <a href="" target="_blank" rel="noopener noreferrer">файл сценария</a>
 							<ul>
 								<li>
 									Закиньте его в папку со сценариями:
@@ -172,7 +40,7 @@
 							</ul>
 						</li>
 						<li>
-							Скачайте <a href="https://drive.google.com/file/d/1xxASbjTXkFWIGRwJe3zxgCqRXH4Kg_MD/view?usp=sharing" target="_blank" rel="noopener noreferrer">файл конфигурации модов</a>
+							Скачайте <a href="" target="_blank" rel="noopener noreferrer">файл конфигурации модов</a>
 							<ul>
 								<li>
 									Закиньте его в папку с конфигами:
@@ -469,51 +337,6 @@
 		&copy; 2025 Krekeros & Krek4at team
 	</footer>
 
-	<script>
-		function copyText(pre) {
-			const textarea = document.createElement('textarea');
-			textarea.value = pre.textContent;
-			const originalText = pre.textContent;
-			document.body.appendChild(textarea);
-			textarea.select();
-			try {
-				const success = document.execCommand('copy');
-				if (success) {
-					pre.classList.add('copied');
-					pre.textContent = 'Скопировано!';
-
-					setTimeout(() => {
-					pre.classList.remove('copied');
-					pre.textContent = originalText;
-					}, 1500);
-				}
-			} catch (err) {
-				alert('Ошибка копирования: ' + err);
-			}
-			document.body.removeChild(textarea);
-		}
-
-		document.querySelectorAll('.code-block').forEach(pre => {
-			pre.addEventListener('click', () => {
-				const originalText = pre.textContent;
-
-				try {
-					navigator.clipboard.writeText(originalText).then(() => {
-						pre.classList.add('copied');
-						pre.textContent = 'Скопировано!';
-
-						setTimeout(() => {
-						pre.classList.remove('copied');
-						pre.textContent = originalText;
-						}, 1500);
-					}).catch(err => {
-						alert('Ошибка копирования: ' + err);
-					});
-				} catch(err) {
-					copyText(pre);
-				}
-			});
-		});
-	</script>
+	<scrip src="js/script.js"></script>
 </body>
 </html>
