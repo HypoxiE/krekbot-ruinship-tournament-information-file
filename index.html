@@ -95,6 +95,24 @@
 			width: 95%;
 			margin: 20px auto;
 		}
+
+		img {
+			height: auto;
+			width: 90%;
+			border: 5px solid #3a3c9a;
+			border-radius: 15px;
+			box-sizing: border-box;
+		}
+
+		.star::before {
+			content: "";
+			display: inline-block;
+			width: 1em;
+			height: 1em;
+			background: url("icon.ico") no-repeat center center;
+			background-size: contain;
+			color: transparent;
+		}
 	</style>
 </head>
 <body>
@@ -381,7 +399,16 @@
 		<hr>
 
 		<h2>Краткая информация о модах в сборке</h2>
-		В сборке помимо турнирного содержатся QoL моды для вашего удобства. Некоторые из них можно отключить, такие моды будут помечены значком "&#10022;"
+		В сборке помимо турнирного содержатся QoL моды для вашего удобства. Некоторые из них можно отключить, такие моды будут помечены значком "<span class="star"></span>"
+		<ol>
+			<li>
+				<details>
+					<summary><strong>Pick Up And Haul</strong> <span class="star"></span></summary>
+					<img  src="https://images.steamusercontent.com/ugc/918040525572299073/AF78A9897E8F4F230FFD67FE939781CB3F2E1081/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false">
+					Описание мода, что он делает и т.п.
+				</details>
+			</li>
+		</ol>
 		<hr>
 
 		<h2>Правила</h2>
