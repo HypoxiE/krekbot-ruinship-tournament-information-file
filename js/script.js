@@ -11,8 +11,10 @@ function copyText(pre) {
 			pre.textContent = 'Скопировано!';
 
 			setTimeout(() => {
-			pre.classList.remove('copied');
-			pre.textContent = originalText;
+				pre.classList.remove('copied');
+				if (originalText != 'Скопировано!'){
+					pre.textContent = originalText;
+				}
 			}, 1500);
 		}
 	} catch (err) {
@@ -21,7 +23,7 @@ function copyText(pre) {
 	document.body.removeChild(textarea);
 }
 
-document.querySelectorAll('.code-block').forEach(pre => {
+document.querySelectorAll('.to_copy').forEach(pre => {
 	pre.addEventListener('click', () => {
 		const originalText = pre.textContent;
 
@@ -31,8 +33,10 @@ document.querySelectorAll('.code-block').forEach(pre => {
 				pre.textContent = 'Скопировано!';
 
 				setTimeout(() => {
-				pre.classList.remove('copied');
-				pre.textContent = originalText;
+					pre.classList.remove('copied');
+					if (originalText != 'Скопировано!'){
+						pre.textContent = originalText;
+					}
 				}, 1500);
 			}).catch(err => {
 				alert('Ошибка копирования: ' + err);

@@ -29,7 +29,7 @@ footer {
 /* =======================
    Кодовые вставки
    ======================= */
-pre {
+.path {
 	font-size: 14px;
 	background: #f0f0f0;
 	padding: 10px;
@@ -37,12 +37,17 @@ pre {
 	cursor: pointer;
 	user-select: none;
 	position: relative;
-	transition: background-color 0.3s;
 	margin-left: -70px;
 	overflow-x: auto;
 	white-space: pre;
 }
-pre.copied {
+
+.to_copy {
+	transition: background-color 0.3s;
+}
+
+.copied {
+	font-weight: normal;
 	background-color: #d4edda;
 	border: 1px solid #28a745;
 }
